@@ -12,4 +12,4 @@ const Room = () => {
   )
 }
 
-export default transition(Room)
+export default transition(Room);
