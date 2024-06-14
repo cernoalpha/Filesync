@@ -10,14 +10,13 @@ function App() {
   const location = useLocation();
   return (
     <>
-      <div className="container">
+    
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/room" element={<Room />} />
           </Routes>
         </AnimatePresence>
-      </div>
     </>
   );
 }
