@@ -1,13 +1,30 @@
 import './App.css'
-import MotionText from './components/motion-text'
+import Home from './components/Home';
+import Room from './components/Room';
+// import MotionText from './components/motion-text'
+import {
+  BrowserRouter ,
+  Route,
+  Routes,
+} from "react-router-dom";
+
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
 
 
   return (
     <>
- 
-      <MotionText delayOffset={0.5}>FileSync...!</MotionText>
+      <BrowserRouter>
+          <div className="container">
+          <AnimatePresence mode='wait'>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/room" element={<Room />} />
+            </Routes>
+            </AnimatePresence>
+          </div>
+        </BrowserRouter>
       
     </>
   )
