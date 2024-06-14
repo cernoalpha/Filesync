@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
+import { FC } from "react";
 
-export default function MotionText({
-  children,
-  delayOffset = 0,
-}: {
+interface MotionTextProps {
   children: string;
-  delayOffset: number;
-}) {
-  const text = children;
-  const segmenter = new Intl.Segmenter("en", { granularity: "grapheme" });
-  const letters = Array.from(segmenter.segment(text), (s) => s.segment).map(
-    (letter) => (letter === " " ? "\u00A0" : letter),
+  delayOffset?: number;
+}
+
+const MotionText: FC<MotionTextProps> = ({ children, delayOffset = 0 }) => {
+  // Split text into individual characters
+  const letters = children.split("").map((char) =>
+    char === " " ? "\u00A0" : char
   );
 
   return (
     <motion.div>
+        
       {letters.map((letter, index) => (
         <motion.span
           className="inline-flex"
@@ -33,4 +33,6 @@ export default function MotionText({
       ))}
     </motion.div>
   );
-}
+};
+
+export default MotionText;
