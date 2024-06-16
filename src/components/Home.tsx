@@ -13,7 +13,7 @@ const Home = () => {
       <div className="container flex flex-col items-center justify-center h-screen bg-red-400 text-white space-y-6">
         <div className="text-4xl font-bold">Filesync</div>
         <div className="text-2xl font-semibold">
-          <MotionText delayOffset={1.1}>Share files in a flash, with zero hassle.</MotionText>
+          <MotionText delayOffset={0}>Share files in a flash, with zero hassle.</MotionText>
         </div>
 
         <Link to="/room">
