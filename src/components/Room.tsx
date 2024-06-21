@@ -2,7 +2,7 @@
 
 // @ts-ignore
 import transition from "../transition.jsx";
-
+import ChatBox from "./Chatbox.tsx";
 // import MotionText from "./motion-text.js";
 import { Button } from "./ui/button.js";
 import { Link } from "react-router-dom";

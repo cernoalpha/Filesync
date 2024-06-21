@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 import transition from "../transition.jsx";
 import MotionText from "./motion-text.js";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <>
       <div className="container flex flex-col items-center justify-center h-screen bg-red-400 text-white space-y-6">
